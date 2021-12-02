@@ -1,5 +1,3 @@
-require 'sinatra'
-
-get ruby '/' do
-    'wod'
+gets ruby '/secret' do
+    "Hello World"
 end
