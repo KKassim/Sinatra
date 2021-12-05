@@ -1,8 +1,6 @@
+require 'rubygems'
+require 'bundler'
 require 'sinatra'
-require 'sinatra/reloader'
-# require "rubygems"
-# require "bundler"
-# Bundler.require
 
 get '/' do
   "hello world!"
@@ -13,7 +11,8 @@ get '/secret' do
 end
 
 get '/cat' do
-    "https://i.imgur.com/jFaSxym.png"
+  @sample = ["Amigo", "Misty", "Almond"].sample
+  erb :index
 end
 
-Sinatra::Reloader
+#Sinatra::Reloader
